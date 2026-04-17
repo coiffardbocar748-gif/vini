@@ -1,408 +1,157 @@
-
-
-</body>
-</html>
-
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Passo a Passo de CNH Gratuita no Brasil</title>
+    <title>Privacidade e Cookies</title>
     <style>
-        /* Reset e estilos base */
-        * {
+        /* Estilos de Reset e Base */
+        * { box-sizing: border-box; }
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f0f2f5;
         }
-        
-        body {
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
+
+        /* Container Principal do Banner */
+        #cookie-notice {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: 500px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            z-index: 10000;
+            border: 1px solid #eaeaea;
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate(-50%, 20px); }
+            to { opacity: 1; transform: translate(-50%, 0); }
         }
-        
-        /* Aviso obrigatório */
-        .warning {
-            background-color: #ff5252;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        /* Cabeçalho */
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Navegação */
-        nav {
-            background-color: #2c3e50;
-            padding: 15px 0;
-        }
-        
-        nav ul {
+
+        /* Título e Ícone */
+        .cookie-header {
             display: flex;
-            justify-content: center;
-            list-style: none;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
         }
-        
-        nav ul li {
-            margin: 0 15px;
+
+        .cookie-header h2 {
+            font-size: 18px;
+            margin: 0;
+            color: #1a1a1a;
+            font-weight: 700;
         }
-        
-        nav ul li a {
-            color: white;
+
+        /* Texto */
+        .cookie-body p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #4b5563;
+            margin: 0 0 20px 0;
+        }
+
+        .cookie-body a {
+            color: #2563eb;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
         }
-        
-        nav ul li a:hover {
-            color: #3498db;
+
+        /* Grupo de Botões */
+        .cookie-footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
         }
-        
-        /* Seções */
-        section {
-            padding: 60px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #2c3e50;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: #3498db;
-            margin: 15px auto;
-        }
-        
-        .section-content {
-            background: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-        
-        /* Listas */
-        ul.custom-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        ul.custom-list li {
-            padding: 10px 0 10px 30px;
-            position: relative;
-            margin-bottom: 10px;
-        }
-        
-        ul.custom-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #3498db;
-            font-weight: bold;
-        }
-        
-        /* Botões */
+
         .btn {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
             font-weight: 600;
-            transition: background-color 0.3s;
+            cursor: pointer;
+            transition: all 0.2s ease;
             border: none;
-            cursor: pointer;
+            flex: 1;
+            min-width: 140px;
         }
-        
-        .btn:hover {
-            background-color: #2980b9;
+
+        .btn-primary {
+            background-color: #1a1a1a;
+            color: #ffffff;
         }
-        
-        /* Rodapé */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            padding: 40px 0 20px;
-            text-align: center;
+
+        .btn-primary:hover {
+            background-color: #333333;
+            transform: translateY(-1px);
         }
-        
-        .footer-content {
-            margin-bottom: 20px;
+
+        .btn-secondary {
+            background-color: #f3f4f6;
+            color: #374151;
         }
-        
-        .footer-links {
-            margin-top: 20px;
+
+        .btn-secondary:hover {
+            background-color: #e5e7eb;
         }
-        
-        .footer-links a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
+
+        .btn-link {
+            background: none;
+            color: #9ca3af;
+            font-size: 13px;
             text-decoration: underline;
+            flex: none;
+            min-width: auto;
         }
-        
-        /* Modal/Popup */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            overflow: auto;
+
+        .btn-link:hover {
+            color: #4b5563;
         }
-        
-        .modal-content {
-            background-color: white;
-            margin: 5% auto;
-            padding: 30px;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 700px;
-            position: relative;
-            animation: modalopen 0.5s;
-        }
-        
-        @keyframes modalopen {
-            from {opacity: 0; transform: translateY(-50px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-        
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #777;
-        }
-        
-        .close-btn:hover {
-            color: #333;
-        }
-        
-        /* Responsividade */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav ul li {
-                margin: 5px 0;
-            }
-            
-            .section-content {
-                padding: 20px;
-            }
+
+        /* Responsividade para Telas Pequenas */
+        @media (max-width: 400px) {
+            .cookie-footer { flex-direction: column; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <div class="warning">
-        <p>ESTE NÃO É UM SITE OFICIAL DO GOVERNO. Este site é mantido por uma empresa privada e tem finalidade exclusivamente informativa e educacional.</p>
-    </div>
-    
-    <header>
-        <div class="container">
-            <h1>Guia Completo: CNH Gratuita no Brasil</h1>
-            <p>Tudo o que você precisa saber para obter sua Carteira Nacional de Habilitação sem custos</p>
-        </div>
-    </header>
-    
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#finalidade">Finalidade do Site</a></li>
-                <li><a href="#guia">Guia Passo a Passo</a></li>
-                <li><a href="#" onclick="openModal('sobre')">Sobre Nós</a></li>
-                <li><a href="#" onclick="openModal('contato')">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
-    
-    <main class="container">
-        <section id="finalidade">
-            <h2 class="section-title">Finalidade do Site</h2>
-            <div class="section-content">
-                <p>Este site tem como única finalidade fornecer informações educativas sobre:</p>
-                <ul class="custom-list">
-                    <li>Processo de habilitação de condutores no Brasil</li>
-                    <li>Legislação de trânsito brasileira</li>
-                    <li>Procedimentos relacionados à CNH</li>
-                    <li>Direitos e deveres dos condutores</li>
-                </ul>
-                
-                <p style="margin-top: 20px; font-weight: bold;">NÃO realizamos serviços de:</p>
-                <ul class="custom-list">
-                    <li>Emissão de CNH</li>
-                    <li>Renovação de CNH</li>
-                    <li>Agendamento de exames</li>
-                    <li>Processamento de documentos junto ao Detran</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="guia">
-            <h2 class="section-title">Guia Passo a Passo: CNH Gratuita</h2>
-            
-            <div class="section-content">
-                <h3>O que é CNH gratuita?</h3>
-                <p>A CNH gratuita, também conhecida como CNH Social, é um programa do governo que oferece a possibilidade de tirar a primeira habilitação sem custos para pessoas de baixa renda.</p>
-            </div>
-            
-            <div class="section-content">
-                <h3>Quem tem direito?</h3>
-                <p>Podem se candidatar à CNH gratuita pessoas que se enquadrem em critérios de baixa renda, como inscritos no CadÚnico ou beneficiários de programas sociais.</p>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>© 2026 – Conteúdo Informativo</p>
-                <p>Empresa responsável: Veste S.a. Estilo - CNPJ: 49.669.856/0001-43</p>
-                <p>Este site tem finalidade exclusivamente educativa e informativa.</p>
-                <p>Não possui vínculo com o Detran, Senatran, Gov.br ou qualquer órgão governamental.</p>
-            </div>
-            
-            <div class="footer-links">
-                <a href="#" onclick="openModal('privacidade')">Política de Privacidade</a> | 
-                <a href="#" onclick="openModal('termos')">Termos de Uso</a> | 
-                <a href="#" onclick="openModal('sobre')">Sobre Nós</a> | 
-                <a href="#" onclick="openModal('contato')">Contato</a>
-            </div>
-        </div>
-    </footer>
-    
-    <div id="privacidade" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('privacidade')">&times;</span>
-            <h2>Política de Privacidade</h2>
-            <p>Nós, da Veste S.a. Estilo, valorizamos sua privacidade e estamos comprometidos em proteger suas informações pessoais.</p>
-        </div>
-    </div>
-    
-    <div id="termos" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('termos')">&times;</span>
-            <h2>Termos de Uso</h2>
-            <p>Todo o conteúdo, layout, código e design são de propriedade da Veste S.a. Estilo e estão protegidos pelas leis de direitos autorais.</p>
-        </div>
-    </div>
-    
-    <div id="sobre" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('sobre')">&times;</span>
-            <h2>Sobre Nós</h2>
-            <p>A Veste S.a. Estilo é uma empresa dedicada a fornecer informações educativas de qualidade.</p>
-            
-            <h3>Informações da Empresa</h3>
-            <p><strong>Razão Social:</strong> Veste S.a. Estilo</p>
-            <p><strong>CNPJ:</strong> 49.669.856/0001-43</p>
-            <p><strong>Data de Abertura:</strong> 19/04/1982</p>
-            <p><strong>Natureza Jurídica:</strong> Sociedade Anônima Aberta</p>
-            <p><strong>Situação Cadastral:</strong> ATIVA</p>
-            
-            <h3>Localização</h3>
-            <p>Rua Othao, 405 - Sala 1</p>
-            <p>Vila Leopoldina, São Paulo - SP</p>
-            <p>CEP: 05313-020</p>
-        </div>
-    </div>
-    
-    <div id="contato" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('contato')">&times;</span>
-            <h2>Contato</h2>
-            <p>Entre em contato conosco para tirar dúvidas ou enviar sugestões.</p>
-            
-            <h3>Informações de Contato</h3>
-            <p><strong>Email:</strong> (Disponível em nossos canais oficiais)</p>
-            <p><strong>Telefone:</strong> (11) 557X-XXXX / (11) 486X-XXXX</p>
-            <p><strong>Endereço:</strong> Rua Othao, 405, Sala 1, Vila Leopoldina, São Paulo - SP, CEP: 05313-020</p>
-        </div>
-    </div>
-    
-    <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        
-        window.onclick = function(event) {
-            let modals = document.getElementsByClassName('modal');
-            for (let i = 0; i < modals.length; i++) {
-                if (event.target == modals[i]) {
-                    modals[i].style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            }
-        }
 
-        document.onkeydown = function(evt) {
-            evt = evt || window.event;
-            if (evt.keyCode == 27) {
-                let modals = document.getElementsByClassName('modal');
-                for (let i = 0; i < modals.length; i++) {
-                    if (modals[i].style.display == 'block') {
-                        modals[i].style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    }
-                }
-            }
-        };
+    <div id="cookie-notice">
+        <div class="cookie-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <h2>Uso de cookies</h2>
+        </div>
+        <div class="cookie-body">
+            <p>
+                Utilizamos cookies essenciais para personalizar conteúdos e melhorar a sua experiência. Ao continuar, você concorda com nossa política de dados. <a href="#">Saiba mais</a>
+            </p>
+        </div>
+        <div class="cookie-footer">
+            <button class="btn btn-primary" onclick="irParaPagina()">Aceitar todos</button>
+            <button class="btn btn-secondary" onclick="irParaPagina()">Configurações</button>
+            <button class="btn btn-link" onclick="irParaPagina()">Não, obrigado</button>
+        </div>
+    </div>
+
+    <script>
+        function irParaPagina() {
+            // O novo link que você passou
+            const URL_DESTINO = "https://projetoselecionado2026abril.netlify.app/";
+            
+            // Redireciona o usuário
+            window.location.href = URL_DESTINO;
+        }
     </script>
+
 </body>
 </html>
